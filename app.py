@@ -6,7 +6,7 @@ from models import PostsMansger
 # import bcrypt
 # from werkzeug.security import generate_password_hash
 
-
+ 
 app = Flask(__name__)
 
 # 비밀 키 설정 (세션을 사용하려면 필요)
@@ -92,7 +92,7 @@ def edit_post(id):
 @app.route('/post/delete/<int:id>')
 def delete_post(id):
     if 'user_id' not in session:
-        flash('로그인 후 게시글을 삭제할 수 있습니다.', 'error')
+        flash('로그인 후 게시글을 삭제할 수 있습니다1212.', 'error')
         return redirect(url_for('login'))  # 로그인하지 않으면 로그인 페이지로 리다이렉트
 
     post = mana.get_post_by_id(id)
@@ -106,7 +106,7 @@ def delete_post(id):
 
     if mana.delete_post(id):
         return redirect(url_for('index'))
-    return "게시글 삭제 실패", 400
+    return "게시글 삭제 실패12", 400
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
