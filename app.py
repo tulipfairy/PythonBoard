@@ -6,7 +6,8 @@ from models import PostsMansger
 # import bcrypt
 # from werkzeug.security import generate_password_hash
 
- 
+ #시험중
+ #플라스크 정의
 app = Flask(__name__)
 
 # 비밀 키 설정 (세션을 사용하려면 필요)
@@ -18,7 +19,7 @@ os.makedirs(app.config['UPLOAD_FOLDER'], exist_ok=True)
 mana = PostsMansger()
 
 # 간단한 사용자 예시 (실제 서비스에서는 데이터베이스 사용)
-users = {'user1': 'password123', 'user2': 'mypassword'}
+users = {'user2': 'password123', 'user3': 'mypassword'}
 
 
 @app.route('/')
